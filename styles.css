@@ -1,4 +1,6 @@
 /* Global Reset */
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +11,14 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ddfff7;
+}
+
+.navbar{
+    text-align: center;
+    font-size: 2em;
+    background-image: linear-gradient(pink,#ddfff7);
+    padding: 10px;
+    font-family: 'Sixtyfour Convergence', Verdana, Geneva, Tahoma, sans-serif; /* Use the imported font here */
 }
 
 .fixed-element{
@@ -71,3 +81,27 @@ body {
 .box2{
     background-color: pink;
 }
+
+.animation1{
+    background-color: lightblue;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 50%;
+    font-size: 2em;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.animation1:hover{
+    background-image:linear-gradient(pink,coral);
+    color: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 60%;
+    font-size: 3em;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
