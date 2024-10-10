@@ -11,3 +11,63 @@ body {
     background-color: #ddfff7;
 }
 
+.fixed-element{
+    position:absolute;
+    bottom: 0;
+    right: 0;
+    background-color: lightcoral;
+    padding: 50px;
+    color: white;
+}
+
+.parent{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.parent p{
+    font-size: 1.2rem;
+}
+
+.absolute-child1{
+    position: absolute;
+    top: 50px;
+    left: 70px;
+    background-color: coral;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+}
+
+.absolute-child2{
+    position: absolute;
+    top: 20x;
+    left: 20px;
+    background-color: pink;
+    width: 20%;
+    height: 20%;
+    text-align: center;
+}
+
+.container{
+    margin-top:10px;
+    display: flex;
+    background-color: #fff;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    padding: 10px;
+}
+
+.box1, .box2{
+    width: 5em;
+    height: 5em;
+    background-color: coral;
+}
+
+.box2{
+    background-color: pink;
+}
