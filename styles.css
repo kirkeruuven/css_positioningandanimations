@@ -8,9 +8,10 @@
 }
 
 /* Body Styles */
-body {
+body, html {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #ddfff7;
+    width: 100%;
 }
 
 .navbar{
@@ -32,15 +33,20 @@ body {
 
 .parent{
     position: relative;
-    width: 200px;
+    width: 100%;
     height: 200px;
-    background-color: #fff;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/648b0ef04516f213d02a6b5d/cf8f5db7-244d-4436-8290-7e5090e99651/Snowmass_AerialSunset1_TamaraSusa_BTX05101-Edit_noexp.jpg);
+   background-position: bottom;
     text-align: center;
+    border: black 2px solid;
 }
 
 .parent p{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
 }
+
 
 .absolute-child1{
     position: absolute;
@@ -48,33 +54,37 @@ body {
     left: 70px;
     background-color: coral;
     width: 100px;
-    height: 100px;
+    height: 60px;
     text-align: center;
+    border: solid 2px black;
 }
 
 .absolute-child2{
     position: absolute;
-    top: 20x;
-    left: 20px;
+    top: 60px;
+    left: 200px;
     background-color: pink;
     width: 20%;
     height: 20%;
     text-align: center;
+    border-radius: 8px;
+    border: black 2px solid;
 }
 
 .container{
-    margin-top:10px;
+    margin-top:50px;
     display: flex;
     background-color: #fff;
     align-items: center;
     justify-content: center;
     gap: 50px;
     padding: 10px;
+    margin-bottom: 50px;
 }
 
 .box1, .box2{
-    width: 5em;
-    height: 5em;
+    width: 6em;
+    height: 4em;
     background-color: coral;
 }
 
@@ -87,10 +97,15 @@ body {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    width: 50%;
+    width: 6em;
     font-size: 2em;
     text-align: center;
-    margin-top: 50px;
+    border-radius: 8px;
+    display: block;
+    margin: auto;
+    margin-bottom:50px;
+
+    transition: transform 0.6s ease, background-color 0.6s ease;
 }
 
 .animation1:hover{
@@ -98,10 +113,55 @@ body {
     color: black;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-weight: bold;
-    width: 60%;
+    width: 6em;
     font-size: 3em;
     text-align: center;
     margin-top: 50px;
+
+    transform: scale(1.1);
+    background-image:linear-gradient(pink,coral);
 }
 
+.container{
+    height: 200px;
+    position: relative;
+    border: 3px solid black;
+}
 
+.container:hover .box1,
+.container:hover .box2{
+    transform: translateY(-20px);
+    background-color: black;
+}
+
+.animation2 {
+    width: 200px;
+    height: 100px;
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: auto;
+    background: pink;
+    text-align: center; /* Center text alignment */
+    font-size: 1.5em; /* Optional: Adjust font size */
+    cursor: pointer; /* Optional: Change cursor to pointer */
+    border-radius: 8px;
+    transition: transform 0.5s ease;
+}
+
+.animation2:hover{
+    animation: bounce 0.5s;
+    background-color: white;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px); /* Move up */
+    }
+    60% {
+        transform: translateY(-10px); /* Slightly move up */
+    }
+}
