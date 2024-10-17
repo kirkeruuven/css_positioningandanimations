@@ -184,8 +184,20 @@ html {
   background-color: white;
   padding: 3vh; 
   border: 3px solid black;
+  animation: fadeIn 1s ease-in-out forwards; /* Add the animation */
+  opacity: 0; /* Ensure it starts as invisible */
 }
 
 .animation_info h2 {
   color: coral;
 }
+
+/* Keyframes for Fade-In Animation */
+@keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
