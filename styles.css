@@ -223,3 +223,42 @@ html {
     }
   }
   
+  .center-container {
+    display: flex; /* Enable flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full height of the viewport */
+ 
+  }
+
+  .pop-up {
+    width: 400px; /* Set a width for the pop-up */
+    background-color: rgb(255, 205, 205); /* Background color */
+    padding: 20px; /* Padding for the pop-up */
+    border: 2px solid black; /* Border for visibility */
+    text-align: left;
+    border-radius: 8px; /* Optional: rounded corners */
+    padding: 30px;
+    animation: popUp 0.5s ease forwards; /* Apply the pop-up animation */
+  }
+
+  .center-container h1{
+    color: rgb(255, 108, 54);
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  @keyframes popUp {
+    0% {
+      transform: scale(0.5); /* Start smaller */
+      opacity: 0; /* Start invisible */
+    }
+    60% {
+      transform: scale(1.2); /* Slightly larger */
+      opacity: 1; /* Fully visible */
+    }
+    100% {
+      transform: scale(1); /* Return to original size */
+    }
+  }
+  
