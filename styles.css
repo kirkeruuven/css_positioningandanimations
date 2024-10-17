@@ -242,6 +242,10 @@ html {
     animation: popUp 0.5s ease forwards; /* Apply the pop-up animation */
   }
 
+  .pop-up p{
+    margin-bottom:20px;
+  }
+
   .center-container h1{
     color: rgb(255, 108, 54);
     text-align: center;
@@ -261,4 +265,17 @@ html {
       transform: scale(1); /* Return to original size */
     }
   }
-  
+
+  .back-button {
+    background: #000;
+    color: white; /* Change to your preferred default color */
+    text-decoration: none;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    border-radius:8px;
+}
+
+.back-button:hover {
+    color: rgb(255, 108, 54);
+}
