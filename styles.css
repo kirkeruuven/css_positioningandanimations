@@ -26,68 +26,67 @@ html {
 
 /* Fixed Element */
 .fixed-element {
-    position: fixed; /* Change this to fixed */
-    bottom: 20px; /* Adjust if needed */
-    right: 20px; /* Adjust if needed */
-    background-color: black;
-    padding: 20px; /* Reduce padding for better visibility */
-    color: white;
-    border-radius: 8px; /* Optional: rounded corners */
-    z-index: 1000; /* Ensure it stays on top of other elements */
-  }
+  position: fixed; 
+  bottom: 20px; 
+  right: 20px; 
+  background-color: black;
+  padding: 20px; 
+  color: white;
+  border-radius: 8px; 
+  z-index: 1000; 
+}
 
 /* Parent Element */
 .parent {
-    position: relative;
-    width: 100%;
-    height: 200px;
-    background-image: url(https://images.squarespace-cdn.com/content/v1/648b0ef04516f213d02a6b5d/cf8f5db7-244d-4436-8290-7e5090e99651/Snowmass_AerialSunset1_TamaraSusa_BTX05101-Edit_noexp.jpg);
-    background-position: bottom;
-    text-align: center;
-    border: 2px solid black;
-  }
-  
-  .parent h1 {
-    font-size: 1.3rem;
-    color: white;
-    font-weight: bold;
-    padding-top: 10px;
-  }
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/648b0ef04516f213d02a6b5d/cf8f5db7-244d-4436-8290-7e5090e99651/Snowmass_AerialSunset1_TamaraSusa_BTX05101-Edit_noexp.jpg);
+  background-position: bottom;
+  text-align: center;
+  border: 2px solid black;
+}
 
-  /* Absolute Children */
-  .absolute-child1,
-  .absolute-child2 {
-    position: absolute;
-    border: 2px solid black;
-  }
-  
-  /* Centering Child 1 */
-  .absolute-child1 {
-    top: 40%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to truly center */
-    background-color: coral;
-    width: 100px;
-    height: 60px;
-    text-align: center;
-  }
-  
-  /* Centering Child 2 */
-  .absolute-child2 {
-    top: 80%; /* Center vertically */
-    left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust position to truly center */
-    background-color: pink;
-    width: 20%;
-    height: 20%;
-    text-align: center;
-    border-radius: 8px;
-  }
-  
+.parent h1 {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+/* Absolute Children */
+.absolute-child1,
+.absolute-child2 {
+  position: absolute;
+  border: 2px solid black;
+}
+
+/* Centering Child 1 */
+.absolute-child1 {
+  top: 40%; 
+  left: 50%; 
+  transform: translate(-50%, -50%);
+  background-color: coral;
+  width: 100px;
+  height: 60px;
+  text-align: center;
+}
+
+/* Centering Child 2 */
+.absolute-child2 {
+  top: 80%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  background-color: pink;
+  width: 20%;
+  height: 20%;
+  text-align: center;
+  border-radius: 8px;
+}
+
 /* Container */
 .container {
-  margin-top: 50px;
-  margin-bottom: 50px;
+  margin: 50px 0; 
   padding: 5vh;
   display: flex;
   align-items: center;
@@ -99,18 +98,18 @@ html {
   background-color: #fff;
 }
 
+/* Box Styles */
 .box1 {
-    flex: 1; /* Equal size for all boxes */
-    height: 100px; /* Set a height for visibility */
-    margin: 10px; /* Add some spacing */
-    background-color: lightpink; /* Different color for visibility */
-    text-align: center; /* Center text horizontally */
-    display: flex; /* Enable Flexbox for centering */
-    align-items: center; /* Center text vertically */
-    justify-content: center; /* Center text horizontally */
-    border-radius: 8px; /* Optional: rounded corners */
+  flex: 1;
+  height: 100px; 
+  margin: 10px; 
+  background-color: lightpink;
+  text-align: center; 
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  border-radius: 8px; 
 }
-
 
 /* Container Hover Effect */
 .container:hover .box1,
@@ -131,62 +130,62 @@ html {
   text-align: center;
   border-radius: 8px;
   display: block;
-  margin: auto;
-  margin-bottom: 30px;
-  margin-top: 20px;
+  margin: 20px auto 30px; 
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .animation1:hover {
   background-image: linear-gradient(pink, coral);
   color: black;
-  font-size: 3em; /* Increased font size on hover */
+  font-size: 3em; 
   transform: scale(1.1); /* Slightly enlarge */
 }
 
+/* Animation 2 */
 .animation2 {
-    width: 200px;
-    height: 60px;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin: auto;
-    background: pink;
-    text-align: center;
-    font-size: 1.5em;
-    cursor: pointer;
-    border-radius: 8px;
-    animation: bounceIn 1s forwards; /* Apply the animation */
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin: auto;
+  background: pink;
+  text-align: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  border-radius: 8px;
+  animation: bounceIn 1s forwards; 
 }
 
 .animation2:hover {
-    background-image: linear-gradient(white,pink);
+  background-image: linear-gradient(white, pink);
 }
 
 /* Keyframes for Bounce Animation */
 @keyframes bounceIn {
-    0% {
-      transform: scale(0.1);
-      opacity: 0;
-    }
-    60% {
-      transform: scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: scale(1);
-    }
+  0% {
+    transform: scale(0.1);
+    opacity: 0;
   }
-  
-  .animation_description {
-    text-align: center;
-    width: 100%;
-    height: auto; /* Change to auto */
-    background-color: white;
-    padding: 3vh; /* Keep responsive padding */
-    border: 3px solid black;
+  60% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-.animation_description h2{
-    color: coral;
+/* Animation Description */
+.animation_info {
+  text-align: center;
+  width: 100%;
+  height: auto; 
+  background-color: white;
+  padding: 3vh; 
+  border: 3px solid black;
+}
+
+.animation_info h2 {
+  color: coral;
 }
