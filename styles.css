@@ -11,7 +11,7 @@
 body,
 html {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #ddfff7;
+  background-color: lightblue;
   width: 100%;
 }
 
@@ -26,62 +26,69 @@ html {
 
 /* Fixed Element */
 .fixed-element {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-  background-color: lightcoral;
-  padding: 50px;
-  color: white;
-}
+    position: fixed; /* Change this to fixed */
+    bottom: 20px; /* Adjust if needed */
+    right: 20px; /* Adjust if needed */
+    background-color: black;
+    padding: 20px; /* Reduce padding for better visibility */
+    color: white;
+    border-radius: 8px; /* Optional: rounded corners */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+  }
 
 /* Parent Element */
 .parent {
-  position: relative;
-  width: 100%;
-  height: 200px;
-  background-image: url(https://images.squarespace-cdn.com/content/v1/648b0ef04516f213d02a6b5d/cf8f5db7-244d-4436-8290-7e5090e99651/Snowmass_AerialSunset1_TamaraSusa_BTX05101-Edit_noexp.jpg);
-  background-position: bottom;
-  text-align: center;
-  border: 2px solid black;
-}
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-image: url(https://images.squarespace-cdn.com/content/v1/648b0ef04516f213d02a6b5d/cf8f5db7-244d-4436-8290-7e5090e99651/Snowmass_AerialSunset1_TamaraSusa_BTX05101-Edit_noexp.jpg);
+    background-position: bottom;
+    text-align: center;
+    border: 2px solid black;
+  }
+  
+  .parent h1 {
+    font-size: 1.3rem;
+    color: white;
+    font-weight: bold;
+    padding-top: 10px;
+  }
 
-.parent p {
-  font-size: 1.3rem;
-  color: white;
-  font-weight: bold;
-}
-
-/* Absolute Children */
-.absolute-child1,
-.absolute-child2 {
-  position: absolute;
-  border: 2px solid black;
-}
-
-.absolute-child1 {
-  top: 50px;
-  left: 70px;
-  background-color: coral;
-  width: 100px;
-  height: 60px;
-  text-align: center;
-}
-
-.absolute-child2 {
-  top: 60px;
-  left: 200px;
-  background-color: pink;
-  width: 20%;
-  height: 20%;
-  text-align: center;
-  border-radius: 8px;
-}
-
+  /* Absolute Children */
+  .absolute-child1,
+  .absolute-child2 {
+    position: absolute;
+    border: 2px solid black;
+  }
+  
+  /* Centering Child 1 */
+  .absolute-child1 {
+    top: 40%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    background-color: coral;
+    width: 100px;
+    height: 60px;
+    text-align: center;
+  }
+  
+  /* Centering Child 2 */
+  .absolute-child2 {
+    top: 80%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Adjust position to truly center */
+    background-color: pink;
+    width: 20%;
+    height: 20%;
+    text-align: center;
+    border-radius: 8px;
+  }
+  
 /* Container */
 .container {
   margin-top: 50px;
   margin-bottom: 50px;
-  padding-left: 10px;
+  padding: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -92,15 +99,25 @@ html {
   background-color: #fff;
 }
 
-.box1,
-.box2 {
-  width: 4em;
-  height: 4em;
-  background-color: coral;
+.box1 {
+    flex: 1; /* Equal size for all boxes */
+    height: 100px; /* Set a height for visibility */
+    margin: 10px; /* Add some spacing */
+    background-color: lightpink; /* Different color for visibility */
+    text-align: center; /* Center text horizontally */
+    display: flex; /* Enable Flexbox for centering */
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    border-radius: 8px; /* Optional: rounded corners */
 }
 
-.box2 {
-  background-color: pink;
+
+/* Container Hover Effect */
+.container:hover .box1,
+.container:hover .box2 {
+  transform: translateY(-20px);
+  background-color: black;
+  color: white;
 }
 
 /* Animation Styles */
@@ -115,8 +132,9 @@ html {
   border-radius: 8px;
   display: block;
   margin: auto;
-  margin-bottom: 50px;
-  transition: transform 0.6s ease, background-color 0.6s ease;
+  margin-bottom: 30px;
+  margin-top: 20px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .animation1:hover {
@@ -126,18 +144,9 @@ html {
   transform: scale(1.1); /* Slightly enlarge */
 }
 
-/* Container Hover Effect */
-.container:hover .box1,
-.container:hover .box2 {
-  transform: translateY(-20px);
-  background-color: black;
-}
-
-/* Animation 2 */
-/* Animation 2 */
 .animation2 {
     width: 200px;
-    height: 100px;
+    height: 60px;
     display: flex;
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
@@ -147,24 +156,37 @@ html {
     font-size: 1.5em;
     cursor: pointer;
     border-radius: 8px;
-    animation: bounceIn 2s forwards; /* Apply the animation */
+    animation: bounceIn 1s forwards; /* Apply the animation */
 }
 
 .animation2:hover {
-    background-color: white; /* Change background color */
+    background-image: linear-gradient(white,pink);
 }
 
 /* Keyframes for Bounce Animation */
 @keyframes bounceIn {
     0% {
-        transform: scale(0.1);
-        opacity: 0; /* Start hidden */
+      transform: scale(0.1);
+      opacity: 0;
     }
     60% {
-        transform: scale(1.2);
-        opacity: 1; /* Fade in */
+      transform: scale(1.2);
+      opacity: 1;
     }
     100% {
-        transform: scale(1); /* Final size */
+      transform: scale(1);
     }
+  }
+  
+  .animation_description {
+    text-align: center;
+    width: 100%;
+    height: auto; /* Change to auto */
+    background-color: white;
+    padding: 3vh; /* Keep responsive padding */
+    border: 3px solid black;
+}
+
+.animation_description h2{
+    color: coral;
 }
