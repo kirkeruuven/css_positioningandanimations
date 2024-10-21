@@ -210,15 +210,13 @@ body {
 
 /* Footer Styles */
 .footer {
-  background-color: rgb(255, 228, 233);
+  background-color: rgb(255, 221, 227); /* Fallback color */
   color: black;
   padding: 20px;
   text-align: center; /* Center the text in the footer */
-  width: 100%; /* Ensure it takes full width */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visibility */
-  position: relative; /* Keeps it in flow with the content */
+  width: 100%; /* Ensure the footer takes full width */
+  position: relative; /* Ensure correct positioning */
 }
-
 
 /* Center Container Styles */
 .center-container {
@@ -266,6 +264,7 @@ body {
 }
 
 /* Grid Container Styles */
+
 .grid-container {
   flex: 1; /* Allow it to grow and take available space */
   display: grid;
