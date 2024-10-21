@@ -210,14 +210,15 @@ body {
 
 /* Footer Styles */
 .footer {
-  background-color: #ddfff7; /* Fallback color */
-  background-image: linear-gradient(#ddfff7, pink);
+  background-color: rgb(255, 228, 233);
   color: black;
   padding: 20px;
   text-align: center; /* Center the text in the footer */
-  width: 100%; /* Ensure the footer takes full width */
-  position: relative; /* Ensure correct positioning */
+  width: 100%; /* Ensure it takes full width */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visibility */
+  position: relative; /* Keeps it in flow with the content */
 }
+
 
 /* Center Container Styles */
 .center-container {
