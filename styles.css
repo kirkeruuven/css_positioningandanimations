@@ -209,8 +209,6 @@ body {
   background-color: white;
   padding: 20px; /* Increase padding if needed */
   border: 3px solid black;
-  animation: fadeIn 1s ease-in-out forwards;
-  opacity: 0; /* Start invisible */
 }
 
 
@@ -301,20 +299,6 @@ body {
     transform: rotate(360deg);
   }
 }
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(20px); /* Add a Safari-friendly transform */
-            transform: translateY(20px); /* Ensure smooth entry */
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-}
-
 
 @keyframes pulse {
   0%,
