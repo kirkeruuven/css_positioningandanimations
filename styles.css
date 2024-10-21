@@ -263,9 +263,9 @@ body {
 
 /* Grid Container Styles */
 .grid-container {
-  flex: 1; /* This allows the grid container to grow and fill available space */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+  grid-auto-rows: minmax(200px, auto); /* Set a minimum height */
   gap: 20px;
 }
 
