@@ -8,12 +8,19 @@
 }
 
 /* Body Styles */
-body,
 html {
+  height: 100%; /* Ensure the html takes the full height */
+}
+
+body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: #ddfff7;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the footer is pushed to the bottom */
 }
+
+
 
 /* Navbar Styles */
 .navbar {
@@ -26,17 +33,16 @@ html {
 
 /* Fixed Element */
 .fixed-element {
-  position: fixed; 
-  bottom: 20px; 
-  right: 20px; 
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
   background-color: black;
-  padding: 50px; 
+  padding: 50px;
   color: white;
-  border-radius: 8px; 
-  z-index: 1000; 
+  border-radius: 8px;
+  z-index: 1000;
   animation: pulse 1.5s ease-in-out infinite;
 }
-
 
 /* Parent Element */
 .parent {
@@ -65,8 +71,8 @@ html {
 
 /* Centering Child 1 */
 .absolute-child1 {
-  top: 40%; 
-  left: 50%; 
+  top: 40%;
+  left: 50%;
   transform: translate(-50%, -50%);
   background-color: coral;
   width: 100px;
@@ -76,9 +82,9 @@ html {
 
 /* Centering Child 2 */
 .absolute-child2 {
-  top: 80%; 
-  left: 50%; 
-  transform: translate(-50%, -50%); 
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: pink;
   width: 20%;
   height: 20%;
@@ -88,13 +94,13 @@ html {
 
 /* Container */
 .container {
-  margin: 50px 0; 
+  margin: 50px 0; /* Keep this margin */
   padding: 5vh;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  height: 200px;
+  height: 200px; /* Fixed height */
   position: relative;
   border: 3px solid black;
   background-color: #fff;
@@ -103,14 +109,14 @@ html {
 /* Box Styles */
 .box1 {
   flex: 1;
-  height: 100px; 
-  margin: 10px; 
+  height: 100px;
+  margin: 10px;
   background-color: lightpink;
-  text-align: center; 
+  text-align: center;
   display: flex;
-  align-items: center; 
+  align-items: center;
   justify-content: center;
-  border-radius: 8px; 
+  border-radius: 8px;
 }
 
 /* Container Hover Effect */
@@ -132,14 +138,14 @@ html {
   text-align: center;
   border-radius: 8px;
   display: block;
-  margin: 20px auto 30px; 
+  margin: 20px auto 30px;
   transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .animation1:hover {
   background-image: linear-gradient(pink, coral);
   color: black;
-  font-size: 3em; 
+  font-size: 3em;
   transform: scale(1.1); /* Slightly enlarge */
 }
 
@@ -148,15 +154,15 @@ html {
   width: 200px;
   height: 60px;
   display: flex;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
   margin: auto;
   background: pink;
   text-align: center;
   font-size: 1.5em;
   cursor: pointer;
   border-radius: 8px;
-  animation: bounceIn 1s forwards; 
+  animation: bounceIn 1s forwards;
 }
 
 .animation2:hover {
@@ -182,12 +188,14 @@ html {
 .animation_info {
   text-align: center;
   width: 100%;
-  height: auto; 
+  margin: 50px 0;
+  height: auto; /* Allow height to adjust based on content */
+  min-height: 200px; /* Ensure it has a minimum height */
   background-color: white;
-  padding: 3vh; 
+  padding: 20px; /* Increase padding if needed */
   border: 3px solid black;
-  animation: fadeIn 1s ease-in-out forwards; /* Add the animation */
-  opacity: 0; /* Ensure it starts as invisible */
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0;
 }
 
 .animation_info h2 {
@@ -196,86 +204,92 @@ html {
 
 /* Keyframes for Fade-In Animation */
 @keyframes fadeIn {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  0% {
+    opacity: 0;
   }
+  100% {
+    opacity: 1;
+  }
+}
 
 /* Footer */
-.footer{
-    display: flex;
-    justify-content: space-around;
-    background-image: linear-gradient(#ddfff7, pink);
-    color:black;
-    padding: 20px;
+.footer {
+  background-image: linear-gradient(#ddfff7, pink);
+  color: black;
+  padding: 20px;
+  text-align: center; /* Center the text in the footer */
 }
 
 /* Keyframes for Pulse Animation */
 @keyframes pulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
+  0%,
+  100% {
+    transform: scale(1);
   }
-  
-  .center-container {
-    display: flex; /* Enable flexbox */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Full height of the viewport */
- 
+  50% {
+    transform: scale(1.1);
   }
+}
 
-  .pop-up {
-    width: 400px; /* Set a width for the pop-up */
-    background-color: rgb(255, 205, 205); /* Background color */
-    padding: 20px; /* Padding for the pop-up */
-    border: 2px solid black; /* Border for visibility */
-    text-align: left;
-    border-radius: 8px; /* Optional: rounded corners */
-    padding: 30px;
-    animation: popUp 0.5s ease forwards; /* Apply the pop-up animation */
-  }
+.center-container {
+  display: flex; /* Enable flexbox */
+  flex: 1;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
 
-  .pop-up p{
-    margin-bottom:20px;
-  }
+.pop-up {
+  width: 400px; /* Set a width for the pop-up */
+  background-color: rgb(255, 205, 205); /* Background color */
+  padding: 20px; /* Padding for the pop-up */
+  border: 2px solid black; /* Border for visibility */
+  text-align: left;
+  border-radius: 8px; /* Optional: rounded corners */
+  padding: 30px;
+  animation: popUp 0.5s ease forwards; /* Apply the pop-up animation */
+}
 
-  .center-container h1{
-    color: rgb(255, 108, 54);
-    text-align: center;
-    margin-bottom: 10px;
-  }
+.pop-up p {
+  margin-bottom: 20px;
+}
 
-  @keyframes popUp {
-    0% {
-      transform: scale(0.5); /* Start smaller */
-      opacity: 0; /* Start invisible */
-    }
-    60% {
-      transform: scale(1.2); /* Slightly larger */
-      opacity: 1; /* Fully visible */
-    }
-    100% {
-      transform: scale(1); /* Return to original size */
-    }
-  }
+.center-container h1 {
+  color: rgb(255, 108, 54);
+  text-align: center;
+  margin-bottom: 10px;
+}
 
-  .back-button {
-    background: #000;
-    color: white; /* Change to your preferred default color */
-    text-decoration: none;
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    border-radius:8px;
+@keyframes popUp {
+  0% {
+    transform: scale(0.5); /* Start smaller */
+    opacity: 0; /* Start invisible */
+  }
+  60% {
+    transform: scale(1.2); /* Slightly larger */
+    opacity: 1; /* Fully visible */
+  }
+  100% {
+    transform: scale(1); /* Return to original size */
+  }
+}
+
+.back-button {
+  background: #000;
+  color: white; /* Change to your preferred default color */
+  text-decoration: none;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
 }
 
 .back-button:hover {
-    color: rgb(255, 108, 54);
+  color: rgb(255, 108, 54);
+}
+
+.grid-container {
+  flex: 1; /* This allows the grid container to grow and fill available space */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
