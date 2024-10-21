@@ -169,6 +169,31 @@ body {
   background-image: linear-gradient(white, pink);
 }
 
+.animation3{
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color:coral;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear; 
+  text-align: center;
+  font-size: large;
+ margin: auto;
+ margin-top: 50px;
+ border-radius: 8px;
+ color: white;
+ font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-weight: bold;
+ font-size: 2em;
+}
+
+.animation3:hover{
+  color: black;
+}
 /* Keyframes for Bounce Animation */
 @keyframes bounceIn {
   0% {
@@ -184,6 +209,15 @@ body {
   }
 }
 
+@keyframes spin {
+  from {
+      transform:rotate(0deg);
+  }
+  to {
+      transform:rotate(360deg);
+  }
+}
+
 /* Animation Description */
 .animation_info {
   text-align: center;
@@ -196,10 +230,6 @@ body {
   border: 3px solid black;
   animation: fadeIn 1s ease-in-out forwards;
   opacity: 0;
-}
-
-.animation_info h2 {
-  color: coral;
 }
 
 /* Keyframes for Fade-In Animation */
