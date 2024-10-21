@@ -20,8 +20,6 @@ body {
   min-height: 100vh; /* Ensure the footer is pushed to the bottom */
 }
 
-
-
 /* Navbar Styles */
 .navbar {
   text-align: center;
@@ -69,7 +67,6 @@ body {
   border: 2px solid black;
 }
 
-/* Centering Child 1 */
 .absolute-child1 {
   top: 40%;
   left: 50%;
@@ -80,7 +77,6 @@ body {
   text-align: center;
 }
 
-/* Centering Child 2 */
 .absolute-child2 {
   top: 80%;
   left: 50%;
@@ -92,7 +88,7 @@ body {
   border-radius: 8px;
 }
 
-/* Container */
+/* Container Styles */
 .container {
   margin: 50px 0; /* Keep this margin */
   padding: 5vh;
@@ -120,8 +116,7 @@ body {
 }
 
 /* Container Hover Effect */
-.container:hover .box1,
-.container:hover .box2 {
+.container:hover .box1 {
   transform: translateY(-20px);
   background-color: black;
   color: white;
@@ -169,32 +164,103 @@ body {
   background-image: linear-gradient(white, pink);
 }
 
-.animation3{
+/* Animation 3 */
+.animation3 {
   width: 100px;
   height: 100px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color:coral;
-  animation-name: spin;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear; 
+  background-color: coral;
+  animation: spin 5s linear infinite;
   text-align: center;
-  font-size: large;
- margin: auto;
- margin-top: 50px;
- border-radius: 8px;
- color: white;
- font-family: Verdana, Geneva, Tahoma, sans-serif;
- font-weight: bold;
- font-size: 2em;
+  font-size: 2em;
+  margin: auto;
+  margin-top: 50px;
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
 }
 
-.animation3:hover{
+.animation3:hover {
   color: black;
 }
-/* Keyframes for Bounce Animation */
+
+/* Animation Info Styles */
+.animation_info {
+  text-align: center;
+  width: 100%;
+  margin: 50px 0;
+  min-height: 200px; /* Ensure it has a minimum height */
+  background-color: white;
+  padding: 20px; /* Increase padding if needed */
+  border: 3px solid black;
+  animation: fadeIn 1s ease-in-out forwards;
+  opacity: 0; /* Start invisible */
+}
+
+/* Footer Styles */
+.footer {
+  background-image: linear-gradient(#ddfff7, pink);
+  color: black;
+  padding: 20px;
+  text-align: center; /* Center the text in the footer */
+}
+
+/* Center Container Styles */
+.center-container {
+  display: flex; /* Enable flexbox */
+  flex: 1;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
+
+/* Pop-Up Styles */
+.pop-up {
+  width: 400px; /* Set a width for the pop-up */
+  background-color: rgb(255, 205, 205); /* Background color */
+  padding: 30px; /* Padding for the pop-up */
+  border: 2px solid black; /* Border for visibility */
+  text-align: left;
+  border-radius: 8px; /* Optional: rounded corners */
+  animation: popUp 0.5s ease forwards; /* Apply the pop-up animation */
+}
+
+.pop-up p {
+  margin-bottom: 20px;
+}
+
+/* Heading Styles */
+.center-container h1 {
+  color: rgb(255, 108, 54);
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Back Button Styles */
+.back-button {
+  background: #000;
+  color: white; /* Change to your preferred default color */
+  text-decoration: none;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.back-button:hover {
+  color: rgb(255, 108, 54);
+}
+
+/* Grid Container Styles */
+.grid-container {
+  flex: 1; /* This allows the grid container to grow and fill available space */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Keyframes */
 @keyframes bounceIn {
   0% {
     transform: scale(0.1);
@@ -211,28 +277,13 @@ body {
 
 @keyframes spin {
   from {
-      transform:rotate(0deg);
+    transform: rotate(0deg);
   }
   to {
-      transform:rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
-/* Animation Description */
-.animation_info {
-  text-align: center;
-  width: 100%;
-  margin: 50px 0;
-  height: auto; /* Allow height to adjust based on content */
-  min-height: 200px; /* Ensure it has a minimum height */
-  background-color: white;
-  padding: 20px; /* Increase padding if needed */
-  border: 3px solid black;
-  animation: fadeIn 1s ease-in-out forwards;
-  opacity: 0;
-}
-
-/* Keyframes for Fade-In Animation */
 @keyframes fadeIn {
   0% {
     opacity: 0;
@@ -242,15 +293,6 @@ body {
   }
 }
 
-/* Footer */
-.footer {
-  background-image: linear-gradient(#ddfff7, pink);
-  color: black;
-  padding: 20px;
-  text-align: center; /* Center the text in the footer */
-}
-
-/* Keyframes for Pulse Animation */
 @keyframes pulse {
   0%,
   100% {
@@ -259,34 +301,6 @@ body {
   50% {
     transform: scale(1.1);
   }
-}
-
-.center-container {
-  display: flex; /* Enable flexbox */
-  flex: 1;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-}
-
-.pop-up {
-  width: 400px; /* Set a width for the pop-up */
-  background-color: rgb(255, 205, 205); /* Background color */
-  padding: 20px; /* Padding for the pop-up */
-  border: 2px solid black; /* Border for visibility */
-  text-align: left;
-  border-radius: 8px; /* Optional: rounded corners */
-  padding: 30px;
-  animation: popUp 0.5s ease forwards; /* Apply the pop-up animation */
-}
-
-.pop-up p {
-  margin-bottom: 20px;
-}
-
-.center-container h1 {
-  color: rgb(255, 108, 54);
-  text-align: center;
-  margin-bottom: 10px;
 }
 
 @keyframes popUp {
@@ -301,25 +315,4 @@ body {
   100% {
     transform: scale(1); /* Return to original size */
   }
-}
-
-.back-button {
-  background: #000;
-  color: white; /* Change to your preferred default color */
-  text-decoration: none;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  border-radius: 8px;
-}
-
-.back-button:hover {
-  color: rgb(255, 108, 54);
-}
-
-.grid-container {
-  flex: 1; /* This allows the grid container to grow and fill available space */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
 }
