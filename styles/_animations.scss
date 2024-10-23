@@ -1,0 +1,81 @@
+/* Animation Styles */
+.animation1 {
+    background-color: lightblue;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    width: 6em;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto 50px; /* Increased bottom margin */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .animation1:hover {
+    background-image: linear-gradient(pink, coral);
+    color: black;
+    font-size: 3em;
+    transform: scale(1.1); /* Slightly enlarge */
+  }
+  
+  /* Animation 2 */
+  .animation2 {
+    width: 200px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    background: pink;
+    text-align: center;
+    font-size: 1.5em;
+    cursor: pointer;
+    border-radius: 8px;
+    animation: bounceIn 1s forwards;
+  }
+  
+  .animation2:hover {
+    background-image: linear-gradient(white, pink);
+  }
+  
+  /* Animation 3 */
+  .animation3 {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: coral;
+    animation: spin 5s linear infinite;
+    text-align: center;
+    font-size: 2em;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    -webkit-animation: spin 5s linear infinite; /* For Safari/Chrome */
+    -moz-animation: spin 5s linear infinite; /* For Firefox */
+    animation: spin 5s linear infinite;
+  }
+  
+  .animation3:hover {
+    color: black;
+  }
+  
+  /* Animation Info Styles */
+  .animation_info {
+    display: flex; /* Use flexbox for children */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center align items */
+    gap: 3px; /* Space between items */
+    text-align: center;
+    width: 100%;
+    margin: 50px 0;
+    min-height: 200px; /* Ensure it has a minimum height */
+    background-color: white;
+    padding: 20px; /* Increase padding if needed */
+    border: 3px solid black;
+  }

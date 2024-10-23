@@ -1,0 +1,110 @@
+/* Navbar Styles */
+.navbar {
+  text-align: center;
+  font-size: 2em;
+  background-image: linear-gradient(pink, #ddfff7);
+  padding: 10px;
+  font-family: "Sixtyfour Convergence", Verdana, Geneva, Tahoma, sans-serif; /* Imported font */
+}
+
+/* Fixed Element */
+.fixed-element {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: black;
+  padding: 50px;
+  color: white;
+  border-radius: 8px;
+  z-index: 1000;
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Parent Element */
+.parent {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-image: url(https://images.squarespace-cdn.com/content/v1/648b0ef04516f213d02a6b5d/cf8f5db7-244d-4436-8290-7e5090e99651/Snowmass_AerialSunset1_TamaraSusa_BTX05101-Edit_noexp.jpg);
+  background-position: bottom;
+  text-align: center;
+  border: 2px solid black;
+}
+
+.parent h1 {
+  font-size: 1.3rem;
+  color: white;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+/* Absolute Children */
+.absolute-child1,
+.absolute-child2 {
+  position: absolute;
+  border: 2px solid black;
+}
+
+.absolute-child1 {
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: coral;
+  width: 100px;
+  height: 60px;
+  text-align: center;
+}
+
+.absolute-child2 {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: pink;
+  width: 20%;
+  height: 20%;
+  text-align: center;
+  border-radius: 8px;
+}
+
+/* Box Styles */
+.box1 {
+  flex: 1;
+  height: 100px;
+  margin: 10px;
+  background-color: lightpink;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+/* Pop-Up Styles */
+.pop-up {
+  width: 400px; /* Set a width for the pop-up */
+  background-color: rgb(255, 205, 205); /* Background color */
+  padding: 30px; /* Padding for the pop-up */
+  border: 2px solid black; /* Border for visibility */
+  text-align: left;
+  border-radius: 8px; /* Optional: rounded corners */
+  animation: popUp 0.5s ease forwards; /* Apply the pop-up animation */
+}
+
+.pop-up p {
+  margin-bottom: 20px;
+}
+
+/* Back Button Styles */
+.back-button {
+  background: #000;
+  color: white; /* Change to your preferred default color */
+  text-decoration: none;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.back-button:hover {
+  color: rgb(255, 108, 54);
+}

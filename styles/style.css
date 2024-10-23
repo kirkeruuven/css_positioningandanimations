@@ -1,13 +1,11 @@
 /* Global Reset */
 @import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap");
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; /* Ensure consistent box sizing */
 }
 
-/* Body Styles */
 html {
   height: 100%; /* Ensure the html takes the full height */
 }
@@ -18,12 +16,6 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh; /* Ensure the footer is pushed to the bottom */
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh; /* Ensure footer is pushed down */
 }
 
 /* Navbar Styles */
@@ -94,20 +86,6 @@ body {
   border-radius: 8px;
 }
 
-/* Container Styles */
-.container {
-  margin: 5vh 0;
-  padding: 5vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 2vw; /* Relative to viewport width */
-  height: 20vh; /* Relative to viewport height */
-  position: relative;
-  border: 3px solid black;
-  background-color: #fff;
-}
-
 /* Box Styles */
 .box1 {
   flex: 1;
@@ -121,11 +99,45 @@ body {
   border-radius: 8px;
 }
 
-/* Container Hover Effect */
-.container:hover .box1 {
-  transform: translateY(-20px);
-  background-color: black;
-  color: white;
+/* Pop-Up Styles */
+.pop-up {
+  width: 400px; /* Set a width for the pop-up */
+  background-color: rgb(255, 205, 205); /* Background color */
+  padding: 30px; /* Padding for the pop-up */
+  border: 2px solid black; /* Border for visibility */
+  text-align: left;
+  border-radius: 8px; /* Optional: rounded corners */
+  animation: popUp 0.5s ease forwards; /* Apply the pop-up animation */
+}
+
+.pop-up p {
+  margin-bottom: 20px;
+}
+
+/* Back Button Styles */
+.back-button {
+  background: #000;
+  color: white; /* Change to your preferred default color */
+  text-decoration: none;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+}
+
+.back-button:hover {
+  color: rgb(255, 108, 54);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: pink; /* Solid pink background */
+  color: black; /* Text color */
+  padding: 20px; /* Space around the text */
+  text-align: center; /* Center the text */
+  width: 100%; /* Full width */
+  margin-top: auto; /* Push footer to the bottom */
+  position: relative; /* Ensure it flows with the document */
 }
 
 /* Animation Styles */
@@ -185,9 +197,7 @@ body {
   margin-top: 50px;
   border-radius: 8px;
   color: white;
-  font-weight: bold;
-  -webkit-animation: spin 5s linear infinite; /* For Safari/Chrome */
-  -moz-animation: spin 5s linear infinite; /* For Firefox */
+  font-weight: bold; /* For Safari/Chrome */ /* For Firefox */
   animation: spin 5s linear infinite;
 }
 
@@ -210,60 +220,38 @@ body {
   border: 3px solid black;
 }
 
-/* Footer Styles */
-.footer {
-  background-color: pink; /* Solid pink background */
-  color: black; /* Text color */
-  padding: 20px; /* Space around the text */
-  text-align: center; /* Center the text */
-  width: 100%; /* Full width */
-  margin-top: auto; /* Push footer to the bottom */
-  position: relative; /* Ensure it flows with the document */
-}
-
-/* Center Container Styles */
-.center-container {
-  display: flex; /* Enable flexbox */
-  flex: 1;
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
-}
-
-/* Pop-Up Styles */
-.pop-up {
-  width: 400px; /* Set a width for the pop-up */
-  background-color: rgb(255, 205, 205); /* Background color */
-  padding: 30px; /* Padding for the pop-up */
-  border: 2px solid black; /* Border for visibility */
-  text-align: left;
-  border-radius: 8px; /* Optional: rounded corners */
-  animation: popUp 0.5s ease forwards; /* Apply the pop-up animation */
-}
-
-.pop-up p {
-  margin-bottom: 20px;
-}
-
-/* Heading Styles */
-.center-container h1 {
-  color: rgb(255, 108, 54);
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Back Button Styles */
-.back-button {
-  background: #000;
-  color: white; /* Change to your preferred default color */
-  text-decoration: none;
-  padding: 5px;
+/* Container Styles */
+.container {
+  margin: 5vh 0;
+  padding: 5vh;
   display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw; /* Relative to viewport width */
+  height: 20vh; /* Relative to viewport height */
+  position: relative;
+  border: 3px solid black;
+  background-color: #fff;
+}
+
+/* Box Styles */
+.box1 {
+  flex: 1;
+  height: 100px;
+  margin: 10px;
+  background-color: lightpink;
+  text-align: center;
+  display: flex;
+  align-items: center;
   justify-content: center;
   border-radius: 8px;
 }
 
-.back-button:hover {
-  color: rgb(255, 108, 54);
+/* Container Hover Effect */
+.container:hover .box1 {
+  transform: translateY(-20px);
+  background-color: black;
+  color: white;
 }
 
 /* Grid Container Styles */
@@ -274,56 +262,20 @@ body {
   gap: 20px;
 }
 
-/* Keyframes */
-@keyframes bounceIn {
-  0% {
-    transform: scale(0.1);
-    opacity: 0;
-  }
-  60% {
-    transform: scale(1.2);
-    opacity: 1;
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes pulse {
-  0%,
-  100% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-}
-
-@keyframes popUp {
-  0% {
-    transform: scale(0.5); /* Start smaller */
-    opacity: 0; /* Start invisible */
-  }
-  60% {
-    transform: scale(1.2); /* Slightly larger */
-    opacity: 1; /* Fully visible */
-  }
-  100% {
-    transform: scale(1); /* Return to original size */
-  }
-}
-
 @media screen and (max-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr; /* Stack elements in one column on smaller screens */
   }
 }
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr; /* Stack elements in one column on smaller screens */
+  }
+}
+/* Grid Container Styles */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+  grid-auto-rows: minmax(200px, auto); /* Set a minimum height */
+  gap: 20px;
+}/*# sourceMappingURL=style.css.map */

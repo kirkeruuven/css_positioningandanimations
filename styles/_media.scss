@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: 1fr; /* Stack elements in one column on smaller screens */
+    }
+  }
+  
+  /* Grid Container Styles */
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two equal columns */
+    grid-auto-rows: minmax(200px, auto); /* Set a minimum height */
+    gap: 20px;
+  }
+  

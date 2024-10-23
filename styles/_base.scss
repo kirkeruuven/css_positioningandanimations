@@ -1,0 +1,20 @@
+/* Global Reset */
+@import url("https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensure consistent box sizing */
+}
+
+html {
+  height: 100%; /* Ensure the html takes the full height */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #ddfff7;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the footer is pushed to the bottom */
+}
